@@ -139,8 +139,15 @@ def funception(func1, begin):
     2
     """
     "*** YOUR CODE HERE ***"
+    def func2(end):
+        if begin > end:
+            return 1
 
-
+        product =1
+        for i in range(begin,end):
+            product*=func1(i)
+        return product
+    return func2
 def mul_by_num(num):
     """Returns a function that takes one argument and returns num
     times that argument.
