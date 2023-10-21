@@ -91,6 +91,10 @@ def summation_using_accumulate(n, term):
     """
     "*** YOUR CODE HERE ***"
 
+    return accumulate(lambda x,y: x+y, 0, n, term)
+
+
+
 def product_using_accumulate(n, term):
     """Returns the product: term(1) * ... * term(n), using accumulate.
 
@@ -106,7 +110,7 @@ def product_using_accumulate(n, term):
     ['Expr', 'Return']
     """
     "*** YOUR CODE HERE ***"
-
+    return accumulate(lambda x,y: x*y, 1, n, term)
 
 def funception(func1, begin):
     """ Takes in a function (func1) and a begin value.
