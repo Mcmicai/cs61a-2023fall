@@ -37,6 +37,7 @@ def product(n, term):
         total *= term(i)  # 将乘积与term(i)相乘
     return total  # 返回最终的乘积
 
+
 def accumulate(merger, start, n, term):
     """Return the result of merging the first n terms in a sequence and start.
     The terms to be merged are term(1), term(2), ..., term(n). merger is a
