@@ -63,6 +63,16 @@ def accumulate(merger, start, n, term):
     16
     """
     "*** YOUR CODE HERE ***"
+    total = start
+    for i in range(1, n+1):
+        total = merger(total,term(i))
+    return total
+
+
+
+
+
+
 
 
 def summation_using_accumulate(n, term):
@@ -80,7 +90,6 @@ def summation_using_accumulate(n, term):
     ['Expr', 'Return']
     """
     "*** YOUR CODE HERE ***"
-
 
 def product_using_accumulate(n, term):
     """Returns the product: term(1) * ... * term(n), using accumulate.
