@@ -75,7 +75,15 @@ def count_cond(condition):
     8
     """
     "*** YOUR CODE HERE ***"
-
+    def counter(n):
+        i=1
+        count=0
+        while i<=n:
+            if(condition(n,i)):
+                count+=1
+            i+=1
+        return count
+    return counter
 
 def multiple(a, b):
     """Return the smallest number n that is a multiple of both a and b.
@@ -86,7 +94,11 @@ def multiple(a, b):
     42
     """
     "*** YOUR CODE HERE ***"
-
+    n=1
+    while True:
+        if n%a==0 and n%b==0:
+            return n
+        n+=1
 
 
 def cycle(f1, f2, f3):
