@@ -136,6 +136,17 @@ def count_coins(total):
     True
     """
     "*** YOUR CODE HERE ***"
+    def constrained_count(total,smallest_coin):
+        if total == 0:
+            return 1
+        if total<0:
+            return 0
+        if smallest_coin == None:
+            return 0
+        without_coin =constrained_count(total,next_larger_coin(smallest_coin))
+        with_coin = constrained_count(total-smallest_coin,smallest_coin)
+        return with_coin+without_coin
+    return constrained_count(total,1)
 
 
 def print_move(origin, destination):
