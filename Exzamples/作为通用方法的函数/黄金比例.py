@@ -1,6 +1,3 @@
-# 作为通用方法的函数
-
-
 def improve(update, close, guess=1):
     while not close(guess):
         guess = update(guess)
